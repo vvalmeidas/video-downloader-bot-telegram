@@ -18,10 +18,19 @@ if(process.env.NODE_ENV === 'production') {
 }
 
 bot.onText(/\/start/, (msg) => {
-    bot.sendMessage(msg.chat.id, 'Hi! Send the tweet link and wait a few seconds while I get your video 😘');
-        
-    }
-)
+    bot.sendMessage(msg.chat.id, 'Hi! Send the tweet link and wait a few seconds while I get your video 😘') 
+    var options = {
+        reply_markup: JSON.stringify({
+          inline_keyboard: [
+            [{ text: 'Some button text 1', callback_data: '1' }],
+            [{ text: 'Some button text 2', callback_data: '2' }],
+            [{ text: 'Some button text 3', callback_data: '3' }]
+          ]
+        })
+      };
+  bot.sendMessage(msg.chat.id, "answer.", options);
+   
+})
 
 bot.onText(TWITTER_URL_REGEX, (msg, watch) => {
     const chatId = msg.chat.id
