@@ -1,1 +1,1 @@
-# video-downloader-bot-telegram
+Telegram bot to download videos. Currently downloading videos from Twitter.
