@@ -17,7 +17,7 @@ if(process.env.NODE_ENV === 'production') {
     bot = new TelegramBot(token, { polling: true })
 }
 
-bot.onText(/start/, (msg, watch) => {
+bot.onText(/\/start/, (msg, watch) => {
     bot.sendMessage(chatId, "Hi! Send the tweet link and wait a few seconds while I get your video 😘", { parse_mode: 'HTML' })
 })
 
