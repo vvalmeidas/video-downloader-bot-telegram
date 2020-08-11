@@ -28,7 +28,6 @@ bot.onText(TWITTER_URL_REGEX, (msg, watch) => {
 
     client(tweetId)
     .then(variants => {
-        bot.sendMessage(chatId, tweetId, { parse_mode: 'HTML' })
         bot.sendVideo(chatId, variants[0].url)    
     })
     .catch(errors => {
