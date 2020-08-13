@@ -17,6 +17,4 @@
     bot.sendMessage(response.message.chat.id, response.data)
  }) */
 const parser = require('./parserTweet')
-parser('https://twitter.com/acouleee/status/129325904263948288').then(response => {
- console.log(response)
-})
+parser('https://www.youtube.com/watch?v=iqI7ZHVniSg')
