@@ -1,1 +1,4 @@
-Telegram bot to download videos. Currently downloading videos from Twitter.
+# Video Downloader Bot for Telegram
+
+Currently operating for Twitter videos.
+t.me/vidownloader_bot
