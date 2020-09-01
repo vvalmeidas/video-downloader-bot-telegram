@@ -30,7 +30,6 @@ bot.onText(TWITTER_URL_REGEX, (msg, watch) => {
     bot.sendMessage(chatId, "GREAT! Let me try to find your video...", { parse_mode: 'HTML' })
     parserTweet(tweetLink).then(response => {
         if(response) {
-            console.log(response)
             bot.sendVideo(chatId, response.url).then(() => {
                 bot.sendMessage(chatId, "Enjoy! 🤩", { parse_mode: 'HTML' })
             })
